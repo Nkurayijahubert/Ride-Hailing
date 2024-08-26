@@ -24,7 +24,6 @@ class AvailableCarsController extends GetxController {
       availableCarsList.assignAll(cars);
     } catch (e) {
       // Handle the error
-      print('Error fetching cars: $e');
     }
   }
 }

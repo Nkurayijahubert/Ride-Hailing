@@ -66,7 +66,7 @@ class AvailableCar extends StatelessWidget {
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 0, vertical: 10),
+                          padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 10),
                           child: Column(
                             // mainAxisSize: MainAxisSize.min,
                             crossAxisAlignment: CrossAxisAlignment.start,

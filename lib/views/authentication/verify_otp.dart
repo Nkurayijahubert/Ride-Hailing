@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:ride_hailing/utils/colors.dart';
@@ -7,6 +6,8 @@ import 'package:ride_hailing/utils/colors.dart';
 import '../../routes/app_routes.dart';
 
 class VerifyOTP extends StatelessWidget {
+  const VerifyOTP({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

@@ -116,7 +116,6 @@ class SignupController extends GetxController {
       showSuccessSnackbar("Signup successful!");
       // Here you can implement your signup logic, such as navigating to another page
       Get.toNamed(AppRoutes.verifyOtp);
-      print('User data stored securely');
     }
   }
 

@@ -48,7 +48,7 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.verifyOtp,
-      page: () => VerifyOTP(),
+      page: () => const VerifyOTP(),
     ),
     GetPage(
       name: AppRoutes.setNewPassword,
