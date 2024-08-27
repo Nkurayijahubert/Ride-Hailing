@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 import '../../utils/colors.dart';
@@ -89,14 +90,17 @@ class ConfirmAddressModal extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: colorPrimary_700),
-                  onPressed: () {
-                    Get.toNamed(AppRoutes.selectTransport);
-                  },
-                  child: const Text(
-                    'Confirm Location',
-                    style: TextStyle(color: Colors.white),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(backgroundColor: colorPrimary_700),
+                    onPressed: () {
+                      Get.toNamed(AppRoutes.selectTransport);
+                    },
+                    child: const Text(
+                      'Confirm Location',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ]),

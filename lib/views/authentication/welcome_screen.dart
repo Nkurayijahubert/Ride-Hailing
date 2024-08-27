@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:ride_hailing/utils/colors.dart';
 
@@ -44,32 +46,38 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: colorPrimary_700),
-              onPressed: () {
-                Get.toNamed(AppRoutes.signup);
-              },
-              child: const Text(
-                'Create an account',
-                style: TextStyle(color: Colors.white, fontSize: 13),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 40.0),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: colorPrimary_700),
+                onPressed: () {
+                  Get.toNamed(AppRoutes.signup);
+                },
+                child: const Text(
+                  'Create an account',
+                  style: TextStyle(color: Colors.white, fontSize: 13),
+                ),
               ),
             ),
             const SizedBox(height: 25.0),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                elevation: 0.0,
-                side: const BorderSide(color: colorPrimary_700, width: 1.0),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 40.0),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  elevation: 0.0,
+                  side: const BorderSide(color: colorPrimary_700, width: 1.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
                 ),
-              ),
-              onPressed: () {
-                Get.toNamed(AppRoutes.signin);
-              },
-              child: const Text(
-                'Login',
-                style: TextStyle(color: colorPrimary_700, fontSize: 13),
+                onPressed: () {
+                  Get.toNamed(AppRoutes.signin);
+                },
+                child: const Text(
+                  'Login',
+                  style: TextStyle(color: colorPrimary_700, fontSize: 13),
+                ),
               ),
             ),
             const SizedBox(

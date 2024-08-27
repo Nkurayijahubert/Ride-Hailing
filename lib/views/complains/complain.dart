@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:ride_hailing/controllers/user.dart';
 import 'package:ride_hailing/models/complains.dart';
@@ -40,6 +41,7 @@ class Complains extends StatelessWidget {
             // print(controller.reviewsList.length);
             return SingleChildScrollView(
               child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.vertical(
@@ -91,7 +93,7 @@ class Complains extends StatelessWidget {
                             style: const TextStyle(color: colorContentLight, fontSize: 15),
                             keyboardType: TextInputType.text,
                             textInputAction: TextInputAction.done,
-                            textCapitalization: TextCapitalization.words,
+                            textCapitalization: TextCapitalization.sentences,
                             // maxLength: 10,
                             maxLines: 4,
                             textAlignVertical: TextAlignVertical.top,
@@ -121,22 +123,25 @@ class Complains extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: colorPrimary_700),
-                      onPressed: () {
-                        ComplainsModel model = ComplainsModel(
-                          heading: controller.headingDefaultValue.value,
-                          description: controller.descriptionValue.value,
-                          userEmail: currentUserEmail,
-                          id: const Uuid().v4(),
-                          createdAt: DateTime.now(),
-                        );
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(backgroundColor: colorPrimary_700),
+                        onPressed: () {
+                          ComplainsModel model = ComplainsModel(
+                            heading: controller.headingDefaultValue.value,
+                            description: controller.descriptionValue.value,
+                            userEmail: currentUserEmail,
+                            id: const Uuid().v4(),
+                            createdAt: DateTime.now(),
+                          );
 
-                        controller.addReview(model);
-                      },
-                      child: const Text(
-                        'Submit',
-                        style: TextStyle(color: Colors.white),
+                          controller.addReview(model);
+                        },
+                        child: const Text(
+                          'Submit',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                     const SizedBox(height: 50),

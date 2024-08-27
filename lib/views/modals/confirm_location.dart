@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 import '../../utils/colors.dart';
@@ -179,17 +180,21 @@ class ConfirmLocationModal extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: colorPrimary_700),
-              onPressed: () {
-                Navigator.pop(context);
-                controller.openConfirmPaymentModal(context);
-              },
-              child: const Text(
-                'Pay',
-                style: TextStyle(color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40.0),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: colorPrimary_700),
+                onPressed: () {
+                  Navigator.pop(context);
+                  controller.openConfirmPaymentModal(context);
+                },
+                child: const Text(
+                  'Pay',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
+            const SizedBox(height: 30),
           ]),
         ),
       ),
